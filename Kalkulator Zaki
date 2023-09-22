@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   float x,y,sum;
+   char pilihan;
+
+
+   cout << "\n==========KALKULATOR SEDERHANA==========\n";
+   cout << "\nDaftar Operasi:\n";
+   cout << "\n\tA.Penjumlahan\n\tB.Pengurangan\n\tC.Perkalian\n\tD.Pembagian\n";
+   cout << "\nMasukkan pilihan Anda: ";
+   cin >> pilihan;
+
+   switch (pilihan) {
+   case 'a':
+   case 'A':
+        cout << "\nPenjumlahan Angka\n";
+        cout << "Masukkan Angka ke-1: ";
+        cin >> x;
+        cout << "Masukkan Angka ke-2: ";
+        cin >> y;
+        sum = x+y;
+        cout << "Hasil Penjumlahan: " << sum;
+        break;
+    case 'b':
+    case 'B':
+        cout << "\nPengurangan Angka\n";
+        cout << "Masukkan Angka ke-1: ";
+        cin >> x;
+        cout << "Masukkan Angka ke-2: ";
+        cin >> y;
+        sum = x-y;
+        cout << "Hasil Pengurangan: " << sum;
+        break;
+    case 'c':
+    case 'C':
+        cout << "\nPerkalian Angka\n";
+        cout << "Masukkan Angka ke-1: ";
+        cin >> x;
+        cout << "Masukkan Angka ke-2: ";
+        cin >> y;
+        sum = x*y;
+        cout << "Hasil Perkalian: " << sum;
+        break;
+    case 'd':
+    case 'D':
+        cout << "\nPembagian Angka\n";
+        cout << "Masukkan Angka ke-1: ";
+        cin >> x;
+        cout << "Masukkan Angka ke-2: ";
+        cin >> y;
+        sum = x/y;
+        cout << "Hasil Pembagian: " << sum;
+        break;
+    default:
+        cout << "Harap masukkan sesuai opsi yang tersedia!!\n";
+        main();
+   }
+
+
+    do{
+        cout<<"\n\nApakah anda ingin keluar (y/n)?: ";
+        cin>>pilihan;
+        if (pilihan=='n' || pilihan=='N')
+        {
+            main();
+        } else if (pilihan=='y' || pilihan=='Y') {
+            cout << "\n==========PROGRAM SELESAI==========\n\n";
+            return false;
+        } else {
+            cout<<"Masukkan y/n!";
+        }
+    } while (true);
+    
+    return 0;
+}
